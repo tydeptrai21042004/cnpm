@@ -1,0 +1,196 @@
+/* src/pages/Home.module.css */
+
+/* General container for padding */
+.container {
+    padding: 2rem 1rem; /* Add overall padding */
+    max-width: 1200px; /* Constrain width on larger screens */
+    margin: 0 auto; /* Center the content */
+    display: flex;
+    flex-direction: column;
+    gap: 4rem; /* Space between sections */
+  }
+  
+  /* --- Hero Section --- */
+  .hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: linear-gradient(135deg, #6e8efb, #a777e3); /* Example gradient */
+    border-radius: 15px;
+    color: white;
+    animation: fadeInScaleUp 1s ease-out forwards; /* Animation */
+  }
+  
+  .heroTitle {
+    font-size: 2.5rem; /* Larger title */
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .heroSubtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+  
+  .heroButton {
+    background-color: #ffffff;
+    color: #6e8efb; /* Match gradient start */
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px; /* Rounded button */
+    cursor: pointer;
+    text-decoration: none; /* Remove underline from Link */
+    display: inline-block; /* Needed for padding/margins */
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out; /* Smooth transition */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .heroButton:hover {
+    transform: translateY(-3px); /* Slight lift on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* --- Features Section --- */
+  .features {
+    text-align: center;
+    animation: fadeIn 1.5s ease-out forwards; /* Fade in later */
+    opacity: 0; /* Start hidden for animation */
+    animation-delay: 0.5s; /* Delay start */
+  }
+  
+  .featuresTitle {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    color: #333;
+  }
+  
+  .featuresGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 2rem;
+  }
+  
+  .featureCard {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease; /* Add hover effect */
+  }
+  
+  .featureCard:hover {
+      transform: translateY(-5px); /* Lift card on hover */
+  }
+  
+  .featureIcon { /* Placeholder for icons */
+    font-size: 2.5rem;
+    color: #a777e3; /* Match gradient end */
+    margin-bottom: 1rem;
+  }
+  
+  .featureTitle {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #444;
+  }
+  
+  .featureDescription {
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  
+  /* --- How It Works Section --- */
+  .howItWorks {
+    text-align: center;
+    background-color: #eef2f7; /* Light background for separation */
+    padding: 3rem 1rem;
+    border-radius: 10px;
+    animation: slideInUp 1s ease-out forwards; /* Animation */
+     opacity: 0; /* Start hidden for animation */
+    animation-delay: 0.8s; /* Delay start */
+  }
+  
+  .howItWorksTitle {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    color: #333;
+  }
+  
+  .stepsGrid {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+  }
+  
+  .step {
+      flex: 1;
+      min-width: 150px;
+      max-width: 200px;
+  }
+  
+  .stepNumber {
+      display: inline-block;
+      background-color: #6e8efb;
+      color: white;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 50%;
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+  }
+  
+  .stepTitle {
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      color: #444;
+  }
+  
+  .stepDescription {
+       color: #666;
+       font-size: 0.9rem;
+  }
+  
+  
+  /* --- Animations --- */
+  
+  /* Fade in + slight scale */
+  @keyframes fadeInScaleUp {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Simple Fade in */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Slide in from bottom */
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

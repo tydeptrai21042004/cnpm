@@ -1,0 +1,73 @@
+/* src/components/AdminChatUsers.module.css */
+
+.container {
+    padding: 1.5rem 2rem; /* Use rem, more padding */
+    background-color: #f8f9fa; /* Light background */
+    border-radius: 8px;
+    max-width: 700px; /* Constrain width */
+    margin: 2rem auto; /* Center the container */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07); /* Subtle shadow */
+  }
+  
+  .title {
+    font-size: 1.6rem; /* Slightly larger */
+    color: #343a40; /* Darker color */
+    margin-bottom: 1.8rem; /* More space below title */
+    text-align: center;
+    border-bottom: 1px solid #dee2e6; /* Separator line */
+    padding-bottom: 0.8rem;
+  }
+  
+  .userList {
+    list-style: none; /* Remove default bullets */
+    padding: 0;
+    margin: 0;
+  }
+  
+  .userItem {
+    display: flex; /* Align email and button horizontally */
+    justify-content: space-between; /* Push items to ends */
+    align-items: center; /* Vertically center items */
+    padding: 1rem 1.2rem; /* Padding within each item */
+    margin-bottom: 0.8rem; /* Space between items */
+    background-color: #ffffff; /* White background for items */
+    border: 1px solid #e9ecef; /* Light border */
+    border-radius: 6px;
+    transition: background-color 0.2s ease-out, box-shadow 0.2s ease-out; /* Smooth hover */
+  }
+  
+  .userItem:hover {
+    background-color: #f8f9fa; /* Slightly change background on hover */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Add subtle shadow on hover */
+  }
+  
+  .userEmail {
+    font-size: 1rem;
+    color: #495057; /* User email color */
+    flex-grow: 1; /* Allow email to take available space */
+    margin-right: 1rem; /* Space before the button */
+    overflow: hidden; /* Prevent long emails from breaking layout */
+    text-overflow: ellipsis; /* Add ... for overflow */
+    white-space: nowrap; /* Keep email on one line */
+  }
+  
+  .openChatButton {
+    background-color: #28a745; /* Green color */
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-out, transform 0.1s ease;
+    flex-shrink: 0; /* Prevent button from shrinking */
+  }
+  
+  .openChatButton:hover {
+    background-color: #218838; /* Darker green on hover */
+  }
+  
+  .openChatButton:active {
+    transform: scale(0.97); /* Press effect */
+  }

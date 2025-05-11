@@ -1,0 +1,96 @@
+/* src/components/BookingForm.module.css */
+
+.formContainer {
+    border-top: 1px solid #e0e0e0; /* Slightly softer border */
+    padding: 1.5rem; /* More padding */
+    margin-top: 1rem; /* Add some space above the form */
+    background-color: #f9f9f9; /* Light background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+  }
+  
+  .formTitle {
+    margin-top: 0; /* Remove default top margin */
+    margin-bottom: 1.5rem; /* Space below title */
+    font-size: 1.3rem; /* Slightly larger title */
+    color: #333; /* Darker title color */
+  }
+  
+  .inputGroup {
+    margin-bottom: 1rem; /* Space between input groups */
+    display: block; /* Ensure labels stack vertically */
+  }
+  
+  .label {
+    display: block; /* Make label take its own line */
+    margin-bottom: 0.4rem; /* Space between label and input */
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .input {
+    display: block; /* Make input take full width available */
+    width: 100%; /* Use full width */
+    padding: 0.7rem 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    margin-top: 0.2rem; /* Ensure consistent spacing */
+  }
+  
+  /* Adjust width for date/time inputs if needed, they can be wide */
+  .input[type="datetime-local"] {
+     max-width: 250px; /* Limit width of date/time inputs */
+     width: auto; /* Allow shrinking if container is smaller */
+     display: inline-block; /* Allow side-by-side placement if desired */
+     margin-right: 1rem; /* Space between date inputs if they are side-by-side */
+  }
+  
+  
+  .buttonContainer {
+      margin-top: 1.5rem; /* Space above the button */
+  }
+  
+  .submitButton {
+    background-color: #007bff; /* Example primary color */
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-out, transform 0.1s ease; /* Smooth transitions */
+  }
+  
+  .submitButton:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  
+  .submitButton:active {
+      transform: scale(0.98); /* Slight press effect */
+  }
+  
+  .errorMessage {
+    color: #dc3545; /* Standard error color */
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+  
+  /* Optional: Style for placing inputs side-by-side on wider screens */
+  /* @media (min-width: 600px) {
+    .inputGroup {
+       display: inline-block;
+       margin-right: 1rem;
+       vertical-align: top;
+    }
+     .input[type="datetime-local"] {
+        margin-right: 0;
+     }
+     .buttonContainer {
+         clear: both;
+     }
+  } */

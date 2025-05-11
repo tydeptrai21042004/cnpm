@@ -1,0 +1,53 @@
+/* src/pages/NotFound.module.css */
+
+.container {
+    text-align: center; /* Center content */
+    margin-top: 10vh; /* Add space from top based on viewport height */
+    padding: 3rem 1rem; /* Add some padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem; /* Space between title and link */
+    min-height: 50vh; /* Ensure it takes some vertical space */
+  }
+  
+  .title {
+    font-size: 2.5rem; /* Larger font size */
+    font-weight: bold;
+    color: #495057; /* Dark grey color */
+    margin-bottom: 0.5rem; /* Reduce default margin slightly */
+  }
+  
+  .errorCode {
+      font-size: 5rem; /* Even larger for the 404 */
+      color: #adb5bd; /* Lighter grey */
+      line-height: 1;
+  }
+  
+  .message {
+      font-size: 1.2rem;
+      color: #6c757d;
+  }
+  
+  .homeLink {
+    display: inline-block; /* Allow padding and margin */
+    padding: 0.8rem 2rem;
+    margin-top: 1rem;
+    background-color: #007bff; /* Primary button color */
+    color: #ffffff; /* White text */
+    border-radius: 6px;
+    text-decoration: none; /* Remove underline */
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease-out, transform 0.1s ease;
+  }
+  
+  .homeLink:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    text-decoration: none;
+    transform: translateY(-1px);
+  }
+  
+  .homeLink:active {
+      transform: scale(0.98);
+  }

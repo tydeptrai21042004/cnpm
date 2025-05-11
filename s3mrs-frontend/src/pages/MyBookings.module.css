@@ -1,0 +1,132 @@
+/* src/pages/MyBookings.module.css */
+
+.container {
+    padding: 1.5rem 2rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    max-width: 900px; /* Adjust width as needed */
+    margin: 2rem auto; /* Center the container */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+  }
+  
+  .title {
+    font-size: 1.8rem;
+    color: #343a40;
+    margin-bottom: 1.8rem;
+    text-align: center;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 0.8rem;
+  }
+  
+  .tableContainer {
+    overflow-x: auto; /* Allow horizontal scroll on smaller screens */
+  }
+  
+  .bookingsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background-color: #ffffff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    overflow: hidden; /* Clip shadow to border-radius */
+  }
+  
+  .tableHead {
+    background-color: #e9ecef;
+  }
+  
+  .tableHeader {
+    padding: 0.9rem 1rem;
+    text-align: left;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #495057;
+    text-transform: uppercase;
+    border-bottom: 2px solid #dee2e6;
+    white-space: nowrap;
+  }
+  
+  .tableBody {
+    /* No specific style needed */
+  }
+  
+  .tableRow {
+    border-bottom: 1px solid #f1f1f1; /* Light horizontal lines */
+    transition: background-color 0.15s ease;
+  }
+  .tableRow:last-child {
+    border-bottom: none;
+  }
+  .tableRow:hover {
+    background-color: #f8f9fa; /* Subtle hover */
+  }
+  
+  .tableCell {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+    color: #495057;
+    vertical-align: middle;
+    white-space: nowrap; /* Keep content on one line */
+  }
+  
+  /* --- Status Cell Specific Styles --- */
+  .statusCell {
+     text-align: center; /* Center the status badge */
+  }
+  
+  .statusBadge {
+    display: inline-block;
+    padding: 0.3rem 0.7rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 12px; /* Pill shape */
+    text-transform: capitalize; /* Capitalize 'pending', 'confirmed' etc. */
+    min-width: 80px; /* Ensure consistent width */
+    text-align: center;
+  }
+  
+  /* Define colors for different statuses */
+  .statusConfirmed {
+    background-color: #d4edda; /* Light green */
+    color: #155724; /* Dark green */
+  }
+  
+  .statusPending {
+    background-color: #fff3cd; /* Light yellow */
+    color: #856404; /* Dark yellow */
+  }
+  
+  .statusCancelled,
+  .statusDeclined { /* Group cancelled and declined */
+    background-color: #f8d7da; /* Light red */
+    color: #721c24; /* Dark red */
+  }
+  
+  /* Fallback for unknown status */
+  .statusUnknown {
+      background-color: #e2e3e5; /* Grey */
+      color: #383d41;
+  }
+  
+  /* --- No Bookings Message --- */
+  .noBookingsMessage {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.1rem;
+    color: #6c757d;
+    background-color: #e9ecef;
+    border-radius: 6px;
+    margin-top: 1rem;
+  }
+  
+  /* --- Loading / Error --- */
+  .loading, .error {
+      text-align: center;
+      padding: 3rem;
+      font-size: 1.1rem;
+      color: #6c757d;
+  }
+  .error {
+      color: #dc3545;
+  }

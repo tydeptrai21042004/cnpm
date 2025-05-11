@@ -1,0 +1,121 @@
+/* src/pages/Login.module.css */
+
+/* Optional: Style the page body to center the container */
+/* You might put this in index.css or App.css */
+/*
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+}
+*/
+
+.container {
+    max-width: 400px; /* Slightly wider */
+    margin: 60px auto; /* Keep auto margin for centering if body style not used */
+    padding: 2.5rem 2rem; /* More padding */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    margin-bottom: 2rem; /* More space below title */
+  }
+  
+  .form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem; /* Space between form groups */
+  }
+  
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem; /* Space between label and input */
+  }
+  
+  .label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #555;
+  }
+  
+  .input {
+    padding: 0.8rem 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box; /* Include padding/border in width */
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .input:focus {
+    border-color: #80bdff;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  .submitButton {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    margin-top: 0.8rem; /* Space above button */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease-out, transform 0.1s ease;
+  }
+  
+  .submitButton:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+  }
+  .submitButton:active {
+      transform: scale(0.99);
+  }
+  .submitButton:disabled { /* Style for loading state */
+      background-color: #a0cfff;
+      cursor: not-allowed;
+  }
+  
+  
+  .errorMessage {
+    color: #dc3545; /* Bootstrap danger color */
+    background-color: #f8d7da; /* Light red background */
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    padding: 0.8rem 1rem;
+    margin-top: 1.2rem;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  
+  .registerLinkContainer {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .registerLink {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: text-decoration 0.2s ease;
+  }
+  
+  .registerLink:hover {
+    text-decoration: underline;
+  }

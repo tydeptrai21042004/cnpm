@@ -1,0 +1,155 @@
+/* src/pages/SearchRooms.module.css */
+
+.container {
+    padding: 1rem 2rem 2rem 2rem; /* Replaces inline padding */
+    max-width: 1200px;
+    margin: 1rem auto;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    min-height: 80vh; /* Ensure container takes some height */
+  }
+  
+  /* --- Header --- */
+  .header {
+    display: flex; /* Replaces inline style */
+    justify-content: space-between; /* Replaces inline style */
+    align-items: center;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  .title {
+    font-size: 2rem;
+    color: #343a40;
+    margin: 0;
+  }
+  
+  .headerActions {
+    display: flex;
+    gap: 0.8rem;
+  }
+  
+  /* --- Buttons --- */
+  /* Base button styling */
+  .button {
+      padding: 0.6rem 1.2rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      border-radius: 6px;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+      background-color: #007bff; /* Default button blue */
+      color: white;
+  }
+  .button:hover {
+      background-color: #0056b3; /* Darker blue */
+      transform: translateY(-1px);
+  }
+  .button:active {
+      transform: scale(0.98);
+  }
+  
+  /* Specific Button Styles */
+  .toggleButton {
+      background-color: #6c757d; /* Grey for toggle */
+      border-color: #6c757d;
+  }
+  .toggleButton:hover {
+      background-color: #5a6268;
+  }
+  
+  .logoutButton {
+      background-color: #dc3545; /* Red for logout */
+      border-color: #dc3545;
+  }
+  .logoutButton:hover {
+      background-color: #c82333;
+  }
+  
+  
+  /* --- Main View Area --- */
+  .viewContainer {
+    margin-top: 1.5rem; /* Space below header */
+    margin-bottom: 2rem; /* Space above potential booking form */
+  }
+  
+  /* List View Grid */
+  .roomList {
+    display: grid;
+    /* Responsive grid */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  /* Map View Specifics */
+  .mapViewContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Space between selector and results */
+  }
+  
+  .positionSelectorWrapper {
+    padding: 1rem;
+    background-color: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+  
+  .roomsAtPositionContainer {
+    margin-top: 1rem;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+  }
+  
+  .roomsAtPositionTitle {
+    font-size: 1.3rem;
+    color: #495057;
+    margin-top: 0;
+    margin-bottom: 1.5rem; /* More space below title */
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #f1f1f1;
+  }
+  
+  /* Style for the list/grid of cards shown below the map selector results */
+  .roomsAtPositionList {
+     display: grid;
+     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+     gap: 1.5rem;
+  }
+  .noRoomsMessage { /* Added for map view when roomsAtPos is empty */
+      font-size: 0.9rem;
+      color: #6c757d;
+      text-align: center;
+      padding: 1rem;
+  }
+  
+  
+  /* --- Loading State --- */
+  .loadingMessage {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #6c757d;
+    padding: 4rem;
+    margin: 2rem auto;
+  }
+  
+  /* --- Booking Form Area --- */
+  /* Add styles here if BookingForm needs a specific container when it appears */
+  /* e.g., if it's not a modal */
+  .bookingFormContainer {
+    /* Example: */
+    /* position: fixed; */
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    /* z-index: 1000; */
+    /* background: white; */
+    /* padding: 2rem; */
+    /* border-radius: 8px; */
+    /* box-shadow: 0 5px 15px rgba(0,0,0,0.2); */
+  }

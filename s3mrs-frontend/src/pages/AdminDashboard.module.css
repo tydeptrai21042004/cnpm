@@ -1,0 +1,271 @@
+/* src/pages/AdminDashboard.module.css */
+
+/* --- Keyframes for Animations --- */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* --- Main Layout --- */
+  .dashboardContainer {
+    padding: 1.5rem 2rem;
+    background-color: #f4f7f9; /* Lighter background */
+    min-height: calc(100vh - 60px); /* Adjust based on header height */
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  .title {
+    font-size: 2rem;
+    color: #343a40;
+  }
+  
+  .logoutButton {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-out, transform 0.1s ease;
+  }
+  
+  .logoutButton:hover {
+    background-color: #5a6268;
+    transform: translateY(-1px);
+  }
+  
+  /* --- Main Content Grid --- */
+  .mainContent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Responsive grid */
+    gap: 2rem;
+  }
+  
+  /* --- Stats & Chart Section --- */
+  .statsAndCharts {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+  }
+  
+  /* --- Stats Cards --- */
+  .statsGrid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+  }
+  
+  .statsCard {
+    background-color: #ffffff;
+    padding: 1.2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    text-align: center;
+    border-left: 4px solid #007bff; /* Accent color */
+    animation: slideUp 0.6s ease-out forwards;
+    opacity: 0; /* Start hidden for animation */
+  }
+  /* Stagger animation delay */
+  .statsCard:nth-child(1) { animation-delay: 0.1s; }
+  .statsCard:nth-child(2) { animation-delay: 0.2s; }
+  
+  .statsValue {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #343a40;
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+  
+  .statsLabel {
+    font-size: 0.9rem;
+    color: #6c757d;
+  }
+  
+  /* --- Booking Stats Specific Card --- */
+  .bookingStatsCard {
+      background-color: #ffffff;
+      padding: 1.2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+      animation: slideUp 0.6s ease-out 0.3s forwards; /* Delay animation */
+      opacity: 0;
+  }
+  .bookingStatsCard h3 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      color: #495057;
+      text-align: center;
+  }
+  .bookingCounts {
+      display: flex;
+      justify-content: space-around;
+      font-size: 0.9rem;
+  }
+  .bookingCounts span { display: block; text-align: center; }
+  .bookingCounts strong { font-size: 1.2rem; display: block; margin-bottom: 0.2rem; }
+  .pending { color: #ffc107; }
+  .approved { color: #28a745; }
+  .declined { color: #dc3545; }
+  
+  
+  /* --- Chart Container --- */
+  .chartContainer {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    animation: slideUp 0.6s ease-out 0.4s forwards; /* Delay animation */
+    opacity: 0;
+    min-height: 300px; /* Ensure space for chart */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .chartContainer h3 {
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      color: #495057;
+  }
+  
+  /* --- User List Section --- */
+  .usersSection {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    animation: slideUp 0.6s ease-out 0.5s forwards; /* Delay animation */
+    opacity: 0;
+  }
+  
+  .usersTitle {
+    font-size: 1.4rem;
+    color: #343a40;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e9ecef;
+  }
+  
+  .userList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 500px; /* Allow scrolling for long lists */
+    overflow-y: auto;
+  }
+  
+  .userItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 0.5rem;
+    border-bottom: 1px solid #f1f1f1;
+    transition: background-color 0.2s ease;
+    /* Stagger item animation (optional, can be much) */
+    /* animation: fadeIn 0.5s ease-out forwards; */
+    /* opacity: 0; */
+  }
+  .userItem:last-child {
+      border-bottom: none;
+  }
+  .userItem:hover {
+    background-color: #f8f9fa;
+  }
+  
+  .userInfo {
+    display: flex;
+    flex-direction: column; /* Stack email/role */
+    flex-grow: 1;
+    margin-right: 1rem;
+    overflow: hidden;
+  }
+  
+  .userEmail {
+    font-size: 0.95rem;
+    color: #495057;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .userRole {
+    font-size: 0.8rem;
+    color: #6c757d;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  
+  .userStatus {
+      display: flex;
+      align-items: center;
+      gap: 1rem; /* Space between status and button */
+  }
+  
+  .userBannedStatus {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #dc3545; /* Red for banned */
+    font-weight: bold;
+    margin-right: 0.5rem; /* Space before button if not using gap */
+  }
+  
+  .toggleBanButton {
+    border: none;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out, transform 0.1s ease;
+    flex-shrink: 0;
+    min-width: 70px; /* Ensure buttons have similar width */
+  }
+  
+  .banButton {
+      background-color: #f8d7da; /* Light red */
+      color: #721c24; /* Dark red text */
+  }
+  .banButton:hover {
+      background-color: #f5c6cb;
+      color: #721c24;
+  }
+  
+  .unbanButton {
+      background-color: #d4edda; /* Light green */
+      color: #155724; /* Dark green text */
+  }
+  .unbanButton:hover {
+      background-color: #c3e6cb;
+      color: #155724;
+  }
+  .toggleBanButton:active {
+      transform: scale(0.96);
+  }
+  
+  
+  /* Loading state */
+  .loading {
+      text-align: center;
+      padding: 3rem;
+      font-size: 1.2rem;
+      color: #6c757d;
+  }

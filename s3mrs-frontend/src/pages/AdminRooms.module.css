@@ -1,0 +1,219 @@
+/* src/pages/AdminRooms.module.css */
+
+.container {
+    padding: 1.5rem 2rem;
+    background-color: #f8f9fa; /* Light background consistent with others */
+    border-radius: 8px;
+    max-width: 1100px; /* Allow more width for table */
+    margin: 2rem auto; /* Center */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+  }
+  
+  .title {
+    font-size: 1.8rem;
+    color: #343a40;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 0.8rem;
+  }
+  
+  /* --- Add Room Form --- */
+  .addRoomForm {
+    background-color: #ffffff;
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem; /* Space between form and table */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e9ecef;
+    display: grid; /* Use grid for flexible layout */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 1rem 1.5rem; /* Row and column gap */
+    align-items: end; /* Align items to the bottom */
+  }
+  
+  .formSectionTitle {
+    grid-column: 1 / -1; /* Span full width */
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #495057;
+    border-bottom: 1px solid #f1f1f1;
+    padding-bottom: 0.5rem;
+  }
+  
+  .formGroup {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+  }
+  
+  .formLabel {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #6c757d;
+  }
+  
+  .formInput {
+    padding: 0.7rem 0.8rem;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    width: 100%; /* Take full width of grid cell */
+    box-sizing: border-box; /* Include padding/border in width */
+    transition: border-color 0.2s ease;
+  }
+  .formInput:focus {
+      border-color: #80bdff;
+      outline: none;
+      box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+  }
+  
+  .positionSelectorContainer {
+      grid-column: 1 / -1; /* Span full width or adjust as needed */
+      margin-top: 0.5rem;
+      padding: 1rem;
+      border: 1px dashed #ced4da;
+      border-radius: 6px;
+      background-color: #fdfdfd;
+  }
+  
+  .addButton {
+    background-color: #007bff; /* Blue */
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem; /* Match input height */
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-out, transform 0.1s ease;
+    height: fit-content; /* Align with bottom of inputs */
+    /* Optionally place in a specific grid column/row */
+     grid-column: -2 / -1; /* Example: place in last column */
+     justify-self: end; /* Align button to the right */
+  }
+  
+  .addButton:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+  }
+  .addButton:active {
+      transform: scale(0.98);
+  }
+  
+  /* --- Room Table --- */
+  .tableContainer {
+      overflow-x: auto; /* Allow horizontal scrolling on small screens */
+  }
+  
+  .roomTable {
+    width: 100%;
+    border-collapse: collapse; /* Remove space between borders */
+    margin-top: 1rem; /* Space above table */
+    background-color: #ffffff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    overflow: hidden; /* Clip shadow to border-radius */
+  }
+  
+  .tableHead {
+    background-color: #e9ecef; /* Light grey header */
+  }
+  
+  .tableHeader {
+    padding: 0.9rem 1rem;
+    text-align: left;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #495057;
+    text-transform: uppercase;
+    border-bottom: 2px solid #dee2e6;
+  }
+  
+  .tableBody {} /* No specific style needed */
+  
+  .tableRow {
+    border-bottom: 1px solid #f1f1f1; /* Light horizontal lines */
+    transition: background-color 0.15s ease;
+  }
+  .tableRow:last-child {
+    border-bottom: none; /* Remove border from last row */
+  }
+  .tableRow:hover {
+    background-color: #f8f9fa; /* Subtle hover */
+  }
+  
+  .tableCell {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+    color: #495057;
+    vertical-align: middle; /* Center content vertically */
+    white-space: nowrap; /* Prevent wrapping in cells initially */
+  }
+  
+  .positionCell {
+      font-family: monospace; /* Monospace for coordinates */
+  }
+  
+  .actionsCell {
+    display: flex;
+    gap: 0.6rem; /* Space between action buttons */
+    white-space: nowrap; /* Keep buttons on one line */
+  }
+  
+  /* --- Table Buttons --- */
+  .tableButton {
+    border: none;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out, transform 0.1s ease;
+    display: inline-flex; /* Align icon and text */
+    align-items: center;
+    gap: 0.3rem;
+  }
+  .tableButton:hover {
+      transform: translateY(-1px);
+  }
+  .tableButton:active {
+      transform: scale(0.97);
+  }
+  
+  .lightButton {
+      min-width: 75px; /* Fixed width */
+      justify-content: center; /* Center content */
+  }
+  .lightButtonOn {
+      background-color: #fff3cd; /* Light yellow */
+      color: #856404;
+  }
+  .lightButtonOff {
+      background-color: #e2e3e5; /* Grey */
+      color: #383d41;
+  }
+  
+  .editButton {
+      background-color: #e2e8f0; /* Light blue-grey */
+      color: #4a5568;
+  }
+  .editButton:hover {
+      background-color: #cbd5e0;
+  }
+  
+  .deleteButton {
+      background-color: #f8d7da; /* Light red */
+      color: #721c24;
+  }
+  .deleteButton:hover {
+      background-color: #f5c6cb;
+  }
+  
+  /* Loading state */
+  .loading {
+      text-align: center;
+      padding: 3rem;
+      font-size: 1.2rem;
+      color: #6c757d;
+  }

@@ -1,0 +1,83 @@
+/* src/components/BookingList.module.css */
+
+.container {
+    padding: 1rem; /* Add some padding around the list */
+    max-width: 800px; /* Optional: constrain width */
+    margin: 1rem auto; /* Optional: center and add margin */
+  }
+  
+  .title {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center; /* Center the title */
+    border-bottom: 2px solid #eee; /* Add a separator line */
+    padding-bottom: 0.5rem;
+  }
+  
+  .bookingList {
+    list-style: none; /* Remove default bullets */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+  }
+  
+  .bookingItem {
+    background-color: #ffffff; /* White background for each item */
+    border: 1px solid #e0e0e0; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 1rem 1.5rem; /* Padding inside each item */
+    margin-bottom: 1rem; /* Space between items */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+    transition: box-shadow 0.2s ease-in-out; /* Add hover effect */
+  }
+  
+  .bookingItem:hover {
+     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); /* Slightly larger shadow on hover */
+  }
+  
+  /* Style for the room identifier part */
+  .roomInfo {
+      font-weight: bold;
+      color: #333;
+  }
+  
+  /* Style for the state part */
+  .bookingState {
+    display: inline-block; /* Allows padding/margin */
+    margin-left: 0.5rem; /* Space before the state */
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px; /* Pill shape */
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    /* Example state-based styling (adjust as needed) */
+    background-color: #e0e0e0; /* Default */
+    color: #555;
+  }
+  
+  /* Add specific styles based on state if possible/needed */
+  /* You might need to add conditional classNames in React for this */
+  .stateConfirmed {
+      background-color: #d4edda; /* Greenish */
+      color: #155724;
+  }
+  .statePending {
+      background-color: #fff3cd; /* Yellowish */
+      color: #856404;
+  }
+  .stateCancelled {
+      background-color: #f8d7da; /* Reddish */
+      color: #721c24;
+  }
+  
+  
+  .loadingMessage,
+  .noBookingsMessage {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.1rem;
+    color: #777;
+  }

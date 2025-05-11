@@ -1,0 +1,124 @@
+/* src/pages/Register.module.css */
+/* Styles are identical to Login.module.css for consistency */
+
+/* Optional: Style the page body to center the container (if not done globally) */
+/*
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+}
+*/
+
+.container {
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 2.5rem 2rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+  }
+  
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  
+  .label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #555;
+  }
+  
+  .input {
+    padding: 0.8rem 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .input:focus {
+    border-color: #80bdff;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  /* Use the same button style */
+  .submitButton {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    margin-top: 0.8rem;
+    background-color: #28a745; /* Green for Register */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease-out, transform 0.1s ease;
+  }
+  
+  .submitButton:hover {
+    background-color: #218838; /* Darker green */
+    transform: translateY(-1px);
+  }
+  .submitButton:active {
+      transform: scale(0.99);
+  }
+  .submitButton:disabled { /* Style for loading state */
+      background-color: #90d8a0; /* Lighter green */
+      cursor: not-allowed;
+  }
+  
+  /* Use the same error message style */
+  .errorMessage {
+    color: #dc3545;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    padding: 0.8rem 1rem;
+    margin-top: 1.2rem;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  
+  /* Style the link container similarly */
+  .loginLinkContainer { /* Renamed for clarity */
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  /* Style the link similarly */
+  .loginLink { /* Renamed for clarity */
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: text-decoration 0.2s ease;
+  }
+  
+  .loginLink:hover {
+    text-decoration: underline;
+  }

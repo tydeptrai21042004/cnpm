@@ -1,0 +1,97 @@
+/* src/components/Footer.module.css */
+
+.footer {
+    background-color: #f8f9fa; /* Lighter grey background */
+    color: #6c757d; /* Muted text color */
+    padding: 2rem 1rem; /* More vertical padding */
+    margin-top: auto; /* Keep footer at the bottom in flex layout */
+    border-top: 1px solid #e9ecef; /* Subtle top border */
+    font-size: 0.9rem;
+  }
+  
+  .footerContent {
+    max-width: 1140px; /* Limit content width */
+    margin: 0 auto; /* Center content */
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: space-between; /* Distribute space */
+    gap: 1.5rem; /* Space between sections */
+    text-align: left; /* Align text left within sections */
+  }
+  
+  .footerSection {
+    flex: 1; /* Allow sections to grow */
+    min-width: 200px; /* Minimum width before wrapping */
+  }
+  
+  .footerSection h5 {
+    color: #343a40; /* Darker heading color */
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .footerLinks {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footerLinkItem {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footerLink {
+    color: #007bff; /* Link color */
+    text-decoration: none;
+    transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
+  }
+  
+  .footerLink:hover {
+    color: #0056b3; /* Darker link color on hover */
+    text-decoration: underline;
+  }
+  
+  .socialLinks {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Align icons horizontally */
+    gap: 1rem; /* Space between icons */
+  }
+  
+  .socialLink a {
+      color: #6c757d; /* Match footer text color */
+      font-size: 1.3rem; /* Adjust icon size */
+      transition: color 0.2s ease-in-out;
+  }
+  
+  .socialLink a:hover {
+      color: #343a40; /* Darker color on hover */
+  }
+  
+  
+  .copyright {
+    text-align: center;
+    margin-top: 2rem; /* Space above copyright */
+    padding-top: 1rem; /* Space within copyright area */
+    border-top: 1px solid #e9ecef; /* Separator line */
+    font-size: 0.85rem;
+    width: 100%; /* Ensure it spans full width */
+    color: #adb5bd; /* Lighter color for copyright */
+  }
+  
+  /* Example Media Query for better stacking on small screens */
+  @media (max-width: 768px) {
+      .footerContent {
+          flex-direction: column; /* Stack sections vertically */
+          align-items: center; /* Center-align content */
+          text-align: center; /* Center-align text within sections */
+      }
+      .socialLinks {
+          justify-content: center; /* Center social icons */
+      }
+      .footerSection {
+          min-width: 100%; /* Allow sections to take full width */
+      }
+  }

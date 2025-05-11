@@ -1,0 +1,141 @@
+/* src/components/AdminChatConversation.module.css */
+
+.container {
+    padding: 1.5rem; /* Use rem */
+    background-color: #f4f7f9; /* Light background */
+    border-radius: 8px;
+    max-width: 800px; /* Optional: constrain width */
+    margin: 1rem auto; /* Optional: center */
+    display: flex;
+    flex-direction: column;
+    height: 80vh; /* Example height, adjust as needed */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: center;
+  }
+  
+  .messagesContainer {
+    flex-grow: 1; /* Allow this area to take up available space */
+    overflow-y: auto; /* Enable vertical scrolling */
+    margin-bottom: 1rem; /* Space before input area */
+    padding: 0.5rem 1rem; /* Padding inside the scrollable area */
+    background-color: #ffffff; /* White background for message area */
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column; /* Stack messages vertically */
+    gap: 0.75rem; /* Space between messages */
+  }
+  
+  /* Base style for individual messages */
+  .message {
+    display: flex; /* Use flex for alignment control */
+    max-width: 75%; /* Limit message width */
+    word-wrap: break-word; /* Break long words */
+  }
+  
+  /* Styles for messages sent by the User */
+  .messageUser {
+    align-self: flex-start; /* Align to the left */
+  }
+  
+  .messageUser .bubble {
+    background-color: #e9ecef; /* Light grey bubble */
+    color: #333;
+    border-radius: 15px 15px 15px 5px; /* Chat bubble shape */
+  }
+  
+  /* Styles for messages sent by the Admin (You) */
+  .messageAdmin {
+    align-self: flex-end; /* Align to the right */
+  }
+  
+  .messageAdmin .bubble {
+    background-color: #007bff; /* Blue bubble */
+    color: white;
+    border-radius: 15px 15px 5px 15px; /* Chat bubble shape */
+  }
+  
+  /* The actual message bubble content */
+  .bubble {
+      padding: 0.6rem 1rem;
+      display: flex;
+      flex-direction: column;
+  }
+  
+  .sender {
+      font-weight: bold;
+      margin-bottom: 0.2rem;
+      font-size: 0.8rem;
+      /* Optional: hide sender name visually if bubble style is enough */
+      /* display: none; */
+  }
+  
+  .content {
+      font-size: 0.95rem;
+      line-height: 1.4;
+  }
+  
+  .timestamp {
+    font-size: 0.75rem;
+    color: #888; /* Lighter color for timestamp */
+    margin-top: 0.3rem;
+    align-self: flex-end; /* Align timestamp to the right within the bubble */
+  }
+  
+  /* Override timestamp color for admin messages */
+  .messageAdmin .timestamp {
+      color: rgba(255, 255, 255, 0.8);
+  }
+  
+  
+  /* --- Input Area Styles --- */
+  .inputArea {
+    display: flex;
+    gap: 0.5rem; /* Space between input and button */
+    margin-top: auto; /* Push to bottom if container has fixed height */
+    padding-top: 0.5rem; /* Space above input */
+    border-top: 1px solid #e0e0e0;
+  }
+  
+  .textInput {
+    flex-grow: 1; /* Input takes available space */
+    padding: 0.7rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 20px; /* Pill shape input */
+    font-size: 1rem;
+    outline: none; /* Remove default focus outline */
+    transition: border-color 0.2s ease;
+  }
+  
+  .textInput:focus {
+      border-color: #007bff; /* Highlight border on focus */
+  }
+  
+  .sendButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 20px; /* Pill shape button */
+    cursor: pointer;
+    transition: background-color 0.2s ease-out, transform 0.1s ease;
+    flex-shrink: 0; /* Prevent button from shrinking */
+  }
+  
+  .sendButton:hover {
+    background-color: #0056b3;
+  }
+  
+  .sendButton:active {
+      transform: scale(0.97); /* Press effect */
+  }

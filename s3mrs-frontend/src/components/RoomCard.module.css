@@ -1,0 +1,79 @@
+/* src/components/RoomCard.module.css */
+
+.card {
+    border: 1px solid #e0e0e0; /* Slightly softer border */
+    border-radius: 8px; /* Slightly more rounded */
+    padding: 1rem 1.2rem; /* Adjusted padding */
+    margin-bottom: 1rem; /* Use rem for consistency */
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    transition: box-shadow 0.3s ease-out, transform 0.3s ease-out; /* Smooth transition for hover */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack elements vertically */
+  }
+  
+  .card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Enhanced shadow on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+  }
+  
+  .title {
+    font-size: 1.3rem; /* Slightly larger title */
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+  }
+  
+  .details {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 0.3rem 0; /* Spacing for detail paragraphs */
+  }
+  
+  /* Specific styling for status paragraph */
+  .status {
+      font-weight: bold; /* Make status stand out */
+  }
+  
+  /* Conditional status colors */
+  .statusAvailable {
+    color: #28a745; /* Green */
+  }
+  
+  .statusOccupied {
+    color: #dc3545; /* Red */
+  }
+  
+  .statusMaintenance {
+    color: #fd7e14; /* Orange */
+  }
+  
+  .reserveButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem; /* Space above the button */
+    align-self: flex-start; /* Align button to the left */
+    transition: background-color 0.2s ease-out, transform 0.1s ease;
+  }
+  
+  .reserveButton:hover:not(:disabled) { /* Apply hover only when not disabled */
+    background-color: #0056b3;
+    transform: scale(1.03); /* Slight scale effect */
+  }
+  
+  .reserveButton:active:not(:disabled) {
+      transform: scale(0.99); /* Press effect */
+  }
+  
+  /* Styles for the disabled button */
+  .reserveButton:disabled {
+    background-color: #ced4da; /* Grey background when disabled */
+    cursor: not-allowed; /* Indicate non-interactive */
+    opacity: 0.7; /* Slightly faded */
+  }

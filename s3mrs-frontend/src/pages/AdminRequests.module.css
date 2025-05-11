@@ -1,0 +1,122 @@
+/* src/pages/AdminRequests.module.css */
+
+.container {
+    padding: 1.5rem 2rem;
+    background-color: #f8f9fa; /* Light background */
+    border-radius: 8px;
+    max-width: 900px; /* Wider container for details */
+    margin: 2rem auto; /* Center */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+  }
+  
+  .title {
+    font-size: 1.8rem; /* Adjusted size */
+    color: #343a40;
+    margin-bottom: 1.8rem;
+    text-align: center;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 0.8rem;
+  }
+  
+  .requestList {
+    list-style: none; /* Remove default bullets */
+    padding: 0;
+    margin: 0;
+  }
+  
+  .requestItem {
+    display: flex;
+    flex-direction: column; /* Stack details and actions vertically */
+    padding: 1.2rem 1.5rem; /* More padding */
+    margin-bottom: 1rem; /* Space between items */
+    background-color: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 8px; /* More rounded */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.2s ease-out;
+  }
+  
+  .requestItem:hover {
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  }
+  
+  .requestDetails {
+    margin-bottom: 1rem; /* Space between details and actions */
+    display: grid; /* Use grid for details alignment */
+    grid-template-columns: auto 1fr; /* Label and Value columns */
+    gap: 0.5rem 1rem; /* Row and Column gap */
+    font-size: 0.95rem;
+    color: #495057;
+  }
+  
+  .detailLabel {
+    font-weight: bold;
+    color: #6c757d; /* Grey label */
+    text-align: right; /* Align labels to the right */
+  }
+  
+  .detailValue {
+    word-break: break-all; /* Break long IDs if needed */
+  }
+  
+  .requestActions {
+    display: flex; /* Align buttons horizontally */
+    gap: 0.8rem; /* Space between buttons */
+    margin-top: 0.5rem; /* Ensure some space if details are short */
+    align-self: flex-end; /* Align action buttons to the right */
+  }
+  
+  /* Base button style */
+  .actionButton {
+    border: none;
+    padding: 0.5rem 1.2rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-out, transform 0.1s ease, box-shadow 0.2s ease;
+  }
+  .actionButton:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .actionButton:active {
+      transform: scale(0.98);
+      box-shadow: none;
+  }
+  
+  /* Specific button styles */
+  .approveButton {
+    background-color: #28a745; /* Green */
+    color: white;
+  }
+  .approveButton:hover {
+    background-color: #218838;
+  }
+  
+  .declineButton {
+    background-color: #dc3545; /* Red */
+    color: white;
+  }
+  .declineButton:hover {
+    background-color: #c82333;
+  }
+  
+  /* Style for the 'no requests' message */
+  .noRequests {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.1rem;
+    color: #6c757d;
+    background-color: #e9ecef;
+    border-radius: 6px;
+    margin-top: 1rem;
+  }
+  
+  /* Loading state */
+  .loading {
+      text-align: center;
+      padding: 3rem;
+      font-size: 1.2rem;
+      color: #6c757d;
+  }
